@@ -28,9 +28,45 @@ const Index = () => {
   const [riddleSubmitted, setRiddleSubmitted] = useState(false);
   const [cakeCut, setCakeCut] = useState(false);
   const [confettiActive, setConfettiActive] = useState(false);
-  const [lyrics, setLyrics] = useState(
-    `Every moment with you feels like a dream,\nA gentle warmth, a quiet gleam.\nThrough every storm and sunny day,\nI hope by your side I'll always stay.\n\nHappy Birthday to you,\nMy world, my light.\nYou make everything beautiful,\nYou make everything right. 💫`
-  );
+  const lyrics = `तेरे बिना मैं कुछ भी नहीं,
+ये बात अब समझ आई
+जब खुद से नफ़रत होने लगी,
+तू बन के वजह आई
+
+मेरी हिम्मत तूने जोड़ी,
+मुझको फिर से अपनाया
+टूटे हुए इस दिल को तूने,
+जीना फिर सिखाया
+
+यारा तेरी दोस्ती को,
+मैंने अपनी जान माना
+तेरे जैसा दोस्त कहाँ,
+कहाँ ऐसा याराना
+
+मेरे दिल की ये दुआ है,
+कभी दूर तू न जाना
+तेरे बिना जो मैं हो जाऊँ,
+वो दिन कभी न आना
+
+हर गिरते हुए लम्हे में,
+तू बन के सहारा आई
+जब राहें भी अनजान लगीं,
+तू बन के उजाला आई
+
+मैं खुद को जब खो बैठा था,
+तूने मुझको पहचाना
+मेरी खामोशी के दर्द को,
+तूने दिल से जाना
+
+तेरे संग हँसना-रोना ही,
+मेरी असली दौलत है
+इस बदलती दुनिया में,
+तेरी दोस्ती इबादत है
+
+यारा ये वादा है तुझसे,
+साथ तेरा न छोड़ूँगा
+जैसे तू थी मेरे हर कल में,
+मैं भी तेरे संग रहूँगा 💫`;
 
   // Check if already uploaded
   useEffect(() => {
@@ -314,11 +350,7 @@ const Index = () => {
 
             <div className="glass rounded-2xl p-5">
               <p className="text-xs font-body text-accent mb-3 uppercase tracking-wider">🎶 Lyrics for you</p>
-              <textarea
-                value={lyrics}
-                onChange={(e) => setLyrics(e.target.value)}
-                className="w-full h-48 bg-secondary/50 rounded-xl px-4 py-3 text-foreground text-sm font-body outline-none focus:ring-2 focus:ring-primary/50 resize-none leading-relaxed"
-              />
+              <pre className="w-full bg-secondary/50 rounded-xl px-4 py-3 text-foreground text-sm font-body leading-relaxed whitespace-pre-wrap text-left">{lyrics}</pre>
             </div>
 
             <p className="text-muted-foreground text-xs font-body mt-6">
